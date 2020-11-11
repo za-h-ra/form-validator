@@ -79,7 +79,7 @@ img {
 
 .form-control {
 	margin-bottom: 10px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 	position: relative;
 }
 
@@ -101,12 +101,17 @@ img {
 	padding: 10px;
 	font-size: 14px;
 	font-family: 'Quicksand', sans-serif;
-	color: var(--secondary-color);
+	color: inherit;
 }
 
 .form-control input:focus {
-	outline: 0;
-	border-color: var(--primary-color);
+	outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
+}
+
+.form-control input::placeholder {
+    color: var(--secondary-color);
 }
 
 .form-control.success input {
@@ -128,6 +133,22 @@ img {
 .form-control.error small {
 	visibility: visible;
 }
+
+.form-title {
+    display: block;
+    transition: all .3s;
+    margin-top: 10px;
+
+}
+
+.form-input:placeholder-shown + .form-title{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-40px);
+    
+}
+
+
 
 .form .button {
 	cursor: pointer;

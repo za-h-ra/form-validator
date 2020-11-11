@@ -18,6 +18,7 @@ function showSuccess(input) {
 	formControl.className = 'form-control success'
 }
 
+
 // Check Email
 
 function checkEmail(input) {
@@ -50,8 +51,6 @@ function checkPasswordsMatch(input1, input2) {
         showError(input2, 'Passwords do not match')
     }
 }
-
-
 
 
 // Check input length
@@ -88,3 +87,4 @@ form.addEventListener('submit', function (e) {
     checkEmail(email)
     checkPasswordsMatch(password, password2)
 })
+

@@ -26,26 +26,31 @@
             </div>
             
             <div class="form-control">
+                <input type="text" id="username" class="form-input" placeholder="Username">
                 <label class="form-title" for="username">Username</label>
-                <input type="text" id="username" placeholder="Username">
                 <small>Error Message</small>
             </div>
             <div class="form-control">
+                <input type="text" id="email" class="form-input" placeholder="Email">
                 <label class="form-title" for="email">Email</label>
-                <input type="text" id="email" placeholder="Email">
                 <small>Error Message</small>
             </div>
             <div class="form-control">
+                <input type="password" class="form-input" id="password" placeholder="Password">
                 <label class="form-title" for="password">Password</label>
-                <input type="password" id="password" placeholder="Password">
                 <small>Error Message</small>
             </div>
             <div class="form-control">
+                <input type="password" class="form-input" id="password2" placeholder="Confirm Password">
                 <label class="form-title" for="password2">Confirm Password</label>
-                <input type="password" id="password2" placeholder="Confirm Password">
                 <small>Error Message</small>
             </div>
-            <input type="submit" value="Sign Up" class="form-button button">
+            <div class="checkbox-container">
+                <input type="checkbox" name="checkbox" value="check" id="agree" class="form-checkbox"> 
+                <label for="check">I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</label>
+            </div>
+            <br>
+                <input type="submit" value="Sign Up" class="form-button button">
 
         </form>
     </div>
