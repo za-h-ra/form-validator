@@ -18,7 +18,6 @@ function showSuccess(input) {
 	formControl.className = 'form-control success'
 }
 
-
 // Check Email
 
 function checkEmail(input) {
@@ -34,8 +33,6 @@ function checkEmail(input) {
 
 function checkRequired(inputArr) {
 	inputArr.forEach(function (input) {
-		console.log(input.value)
-
 		if (input.value.trim() === '') {
 			showError(input, `${getFieldName(input)} is required`)
 		} else {
@@ -44,14 +41,23 @@ function checkRequired(inputArr) {
 	})
 }
 
+// Check Password 2
+
+function checkConfirmPasswordRequired(input) {
+	if (input.value.trim() === '') {
+		showError(input, 'Please confirm password')
+	} else {
+		showSuccess(input)
+	}
+}
+
 // Check passwords match
 
 function checkPasswordsMatch(input1, input2) {
-    if (input1.value !== input2.value) {
-        showError(input2, 'Passwords do not match')
-    }
+	if (input1.value !== input2.value) {
+		showError(input2, 'Passwords do not match')
+	}
 }
-
 
 // Check input length
 
@@ -71,6 +77,20 @@ function checkLength(input, min, max) {
 	}
 }
 
+// Password 2
+
+function checkConfirmPassword(input, min, max) {
+	if (input.value.length < min) {
+		showError(input, `Password must be at least ${min} characters`)
+	} else if (input.value.length > max) {
+		showError(input, `Password must be less than ${max} characters`)
+	} else {
+		showSuccess(input)
+	}
+}
+
+// Get Field Name
+
 function getFieldName(input) {
 	return input.id.charAt(0).toUpperCase() + input.id.slice(1)
 }
@@ -80,11 +100,11 @@ function getFieldName(input) {
 form.addEventListener('submit', function (e) {
 	e.preventDefault()
 
-	checkRequired([username, email, password, password2])
+	checkRequired([username, email, password])
 	checkLength(username, 3, 20)
 	checkLength(password, 6, 25)
-	checkLength(password2, 6, 25)
-    checkEmail(email)
-    checkPasswordsMatch(password, password2)
+	checkEmail(email)
+	checkPasswordsMatch(password, password2)
+	checkConfirmPassword(password2, 6, 25)
+	checkConfirmPasswordRequired(password2)
 })
-

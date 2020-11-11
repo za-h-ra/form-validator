@@ -131,7 +131,8 @@ img {
 }
 
 .form-control.error small {
-	visibility: visible;
+    visibility: visible;
+    margin: 10px;
 }
 
 .form-title {
