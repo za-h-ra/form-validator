@@ -86,11 +86,11 @@ img {
 .form-control label {
 	color: #8395a7;
 	display: block;
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
 .form-title {
-    margin-left: 10px;
+	margin-left: 10px;
 }
 
 .form-control input {
@@ -99,10 +99,9 @@ img {
 	display: block;
 	width: 100%;
 	padding: 10px;
-    font-size: 14px;
-    font-family: 'Quicksand', sans-serif;
-    color: #c8d6e5;
-    
+	font-size: 14px;
+	font-family: 'Quicksand', sans-serif;
+	color: var(--secondary-color);
 }
 
 .form-control input:focus {
@@ -147,8 +146,8 @@ img {
 	margin-left: 10px;
 	margin-right: 10px;
 	font-family: 'Quicksand', sans-serif;
-    font-weight: 600;
-    outline: none;
+	font-weight: 600;
+	outline: none;
 }
 
 .button:hover {
