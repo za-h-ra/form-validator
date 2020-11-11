@@ -115,7 +115,7 @@ img {
 }
 
 .form-control.error input {
-	border-radius: var(--error-color);
+	border-color: var(--error-color);
 }
 
 .form-control small {
