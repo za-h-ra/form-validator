@@ -1,0 +1,18 @@
+/* --------------- VARIABLES ---------- */
+
+:root {
+
+    /* COLORS */ 
+    --primary-color: #2E0BFF;
+    --secondary-color: #1A1D20;
+    --dark-mode-primary-color: #F8648E;
+    --dark-mode-secondary-color: #fff;
+
+}
+
+
+
+
+img {
+    width: 250px;
+}
